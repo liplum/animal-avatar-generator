@@ -2,6 +2,7 @@
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "src/**/*.test.ts"],
   "compilerOptions": {
+    "rootDir": "src",
     "outDir": "dist",
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
@@ -15,9 +16,8 @@
     "sourceMap": false,
     "skipLibCheck": true,
     "experimentalDecorators": true,
-    "downlevelIteration": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "declaration": true,
     "typeRoots": [

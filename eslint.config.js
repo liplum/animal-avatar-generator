@@ -1,17 +1,21 @@
-module.exports = {
-    'env': {
-        'browser': true,
-        'es2021': true
+import tsParser from '@typescript-eslint/parser'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
+
+export default [
+  {
+    ignores: ['dist/**', 'node_modules/**'],
+  },
+  {
+    files: ['src/**/*.ts'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      parser: tsParser,
     },
-    'parser': '@typescript-eslint/parser',
-    'parserOptions': {
-        'ecmaVersion': 12,
-        'sourceType': 'module'
+    plugins: {
+      '@typescript-eslint': tsPlugin,
     },
-    'plugins': [
-        '@typescript-eslint'
-    ],
-    'rules': {
+    rules: {
       'no-extra-semi': 'error',
       'semi': ['error', 'never'],
       'comma-dangle': ['error', 'always-multiline'],
@@ -27,4 +31,5 @@ module.exports = {
       'no-multi-spaces': ['error'],
       'space-infix-ops': ['error'],
     },
-};
+  },
+]
