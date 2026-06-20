@@ -1,4 +1,4 @@
-import { Shape } from './types'
+import type { Shape } from './types.js'
 
 export const faces: Shape[] = [
   (color) => `

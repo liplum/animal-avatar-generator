@@ -1,5 +1,5 @@
-import { Shape } from './types'
-import { darken } from '../utils/colors'
+import type { Shape } from './types.js'
+import { darken } from '../utils/colors.js'
 
 export const patterns: Shape[] = [
   (color) => `

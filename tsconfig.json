@@ -16,8 +16,8 @@
     "sourceMap": false,
     "skipLibCheck": true,
     "experimentalDecorators": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "importHelpers": true,
     "declaration": true,
     "typeRoots": [

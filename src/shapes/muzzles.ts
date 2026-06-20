@@ -1,5 +1,5 @@
-import { darken } from '../utils/colors'
-import { Shape } from './types'
+import { darken } from '../utils/colors.js'
+import type { Shape } from './types.js'
 
 export const muzzles: Shape[] = [
   (_color) => `

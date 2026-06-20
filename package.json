@@ -13,10 +13,18 @@
   ],
   "scripts": {
     "start": "cd example && webpack-dev-server",
-    "build": "tsc",
-    "test": "jest",
-    "test:watch": "jest --watch-all --coverage",
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && tsc",
+    "prepack": "pnpm build",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch-all --coverage",
     "lint": "eslint src"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "files": [
     "dist/**/*"
